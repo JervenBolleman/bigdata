@@ -12,14 +12,20 @@
 	<name>Big Data Test Dependencies</name>
 	<description>Dependencies that are not available in Maven repositories</description>
 
- 	<dependencies>
-  		<dependency>
+	<dependencies>
+		<dependency>
 			<groupId>com.bigdata</groupId>
 			<artifactId>bigdata</artifactId>
 			<version>1.1.0</version>
 		</dependency>
- 	 </dependencies>
-	<!-- NOTE: We must use an id that will be reused by the modules that need this dependency, or it will not be picked up by the new maven rules -->
+		<dependency>
+			<groupId>org.cliffc.high-scale-lib</groupId>
+			<artifactId>high-scale-lib</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+	</dependencies>
+	<!-- NOTE: We must use an id that will be reused by the modules that need 
+		this dependency, or it will not be picked up by the new maven rules -->
 	<repositories>
 		<repository>
 			<id>aduna-opensource.snapshots</id>
@@ -30,6 +36,6 @@
 		<pluginRepository>
 			<id>aduna-opensource.snapshots</id>
 			<url>file:${project.basedir}/src/repository</url>
-		</pluginRepository>	
+		</pluginRepository>
 	</pluginRepositories>
 </project>
