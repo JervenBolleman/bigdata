@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.github.ansell</groupId>
+		<artifactId>bigdata-test-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>bigdata-test-dependencies</artifactId>
+	<packaging>pom</packaging>
+	<name>Big Data Test Dependencies</name>
+	<description>Dependencies that are not available in Maven repositories</description>
+
+ 	<dependencies>
+  		<dependency>
+			<groupId>com.bigdata</groupId>
+			<artifactId>bigdata</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+ 	 </dependencies>
+	<!-- NOTE: We must use an id that will be reused by the modules that need this dependency, or it will not be picked up by the new maven rules -->
+	<repositories>
+		<repository>
+			<id>aduna-opensource.snapshots</id>
+			<url>file:${project.basedir}/src/repository</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>aduna-opensource.snapshots</id>
+			<url>file:${project.basedir}/src/repository</url>
+		</pluginRepository>	
+	</pluginRepositories>
+</project>
