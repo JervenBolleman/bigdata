@@ -12,39 +12,6 @@
 	<name>BigData test</name>
 	<description>Test for the BigData system</description>
 
-	<inceptionYear>2012</inceptionYear>
-	<scm>
-		<connection>scm:git:git@github.com:ansell/bigdata-test.git</connection>
-		<url>scm:git:git@github.com:ansell/bigdata-test.git</url>
-		<developerConnection>scm:git:git@github.com:ansell/bigdata-test.git</developerConnection>
-	</scm>
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/ansell/bigdata-test/issues/</url>
-	</issueManagement>
-	<developers>
-		<developer>
-			<id>p_ansell</id>
-			<email>p_ansell@yahoo.com</email>
-			<name>Peter Ansell</name>
-		</developer>
-	</developers>
-	<licenses>
-		<license>
-			<name>GNU Affero General Public License 3.0</name>
-			<url>http://www.gnu.org/licenses/agpl-3.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<properties>
-		<junit.version>4.10</junit.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<sesame.version>2.6.4</sesame.version>
-		<sesametools.version>1.7-SNAPSHOT</sesametools.version>
-		<slf4j.version>1.6.4</slf4j.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -122,6 +89,11 @@
 		<dependency>
 			<groupId>org.semanticweb.yars</groupId>
 			<artifactId>nxparser</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

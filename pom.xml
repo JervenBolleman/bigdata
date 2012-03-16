@@ -10,8 +10,42 @@
 	<modules>
 		<module>bigdata-dependencies</module>
 		<module>bigdata-test-lib</module>
+		<module>bigdata-sesameloader</module>
 	</modules>
 
+	<inceptionYear>2012</inceptionYear>
+	<scm>
+		<connection>scm:git:git@github.com:ansell/bigdata.git</connection>
+		<url>scm:git:git@github.com:ansell/bigdata.git</url>
+		<developerConnection>scm:git:git@github.com:ansell/bigdata.git</developerConnection>
+	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/ansell/bigdata/issues/</url>
+	</issueManagement>
+	<developers>
+		<developer>
+			<id>p_ansell</id>
+			<email>p_ansell@yahoo.com</email>
+			<name>Peter Ansell</name>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>GNU Affero General Public License 3.0</name>
+			<url>http://www.gnu.org/licenses/agpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<properties>
+		<junit.version>4.10</junit.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<sesame.version>2.6.4</sesame.version>
+		<sesametools.version>1.7-SNAPSHOT</sesametools.version>
+		<slf4j.version>1.6.4</slf4j.version>
+	</properties>
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -252,6 +286,11 @@
 				<artifactId>nxparser</artifactId>
 				<version>1.2.2-j7</version>
 			</dependency>
+		    <dependency>
+		      <groupId>com.github</groupId>
+		      <artifactId>sesame-loader</artifactId>
+		      <version>0.1.0-SNAPSHOT</version>
+		    </dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>

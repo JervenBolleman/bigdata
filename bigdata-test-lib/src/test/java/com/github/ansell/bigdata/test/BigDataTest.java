@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.github.ansell.bigdatatest;
+package com.github.ansell.bigdata.test;
 
 import static org.junit.Assert.*;
 
