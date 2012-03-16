@@ -76,10 +76,6 @@
 			<artifactId>log4j</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.cliffc.high-scale-lib</groupId>
-			<artifactId>high-scale-lib</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>it.unimi.dsi</groupId>
 			<artifactId>fastutil</artifactId>
 		</dependency>
@@ -118,6 +114,10 @@
 		<dependency>
 			<groupId>colt</groupId>
 			<artifactId>colt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.stephenc.high-scale-lib</groupId>
+			<artifactId>high-scale-lib</artifactId>
 		</dependency>
 	</dependencies>
 </project>
