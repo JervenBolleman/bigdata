@@ -18,6 +18,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.openrdf.repository.RepositoryException;
+import org.openrdf.sail.SailException;
 
 import com.github.ansell.bigdata.sesameloader.BigDataRepositoryManagerUnisolated;
 
@@ -100,42 +101,64 @@ public class BigDataRepositoryManagerUnisolatedTest
     
     /**
      * Test method for {@link com.github.ansell.bigdata.sesameloader.BigDataRepositoryManagerUnisolated#getConnection()}.
+     * @throws RepositoryException 
+     * @throws IOException 
+     * @throws SailException 
      */
     @Test
-    public void testGetConnection()
+    public void testGetConnection() throws RepositoryException, IOException, SailException
     {
-        fail("Not yet implemented"); // TODO
+        BigDataRepositoryManagerUnisolated repoManager = new BigDataRepositoryManagerUnisolated(repositoryFile, "fastload.properties");
+        
+        repoManager.getConnection();
+        
+        repoManager.shutDown();
     }
     
     /**
      * Test method for {@link com.github.ansell.bigdata.sesameloader.BigDataRepositoryManagerUnisolated#shutDown()}.
+     * @throws RepositoryException 
+     * @throws SailException 
+     * @throws IOException 
      */
     @Test
-    public void testShutDown()
+    public void testShutDown() throws SailException, RepositoryException, IOException
     {
-        fail("Not yet implemented"); // TODO
+        BigDataRepositoryManagerUnisolated repoManager = new BigDataRepositoryManagerUnisolated(repositoryFile, "fastload.properties");
+        
+        repoManager.shutDown();
     }
     
     /**
      * Test method for {@link com.github.ansell.bigdata.sesameloader.BigDataRepositoryManagerUnisolated#getValueFactory()}.
+     * @throws IOException 
+     * @throws RepositoryException 
+     * @throws SailException 
      */
     @Test
-    public void testGetValueFactory()
+    public void testGetValueFactory() throws RepositoryException, IOException, SailException
     {
-        fail("Not yet implemented"); // TODO
+        BigDataRepositoryManagerUnisolated repoManager = new BigDataRepositoryManagerUnisolated(repositoryFile, "fastload.properties");
+        
+        Assert.assertNotNull(repoManager.getValueFactory());
+        
+        repoManager.shutDown();
     }
     
     /**
      * Test method for {@link com.github.ansell.bigdata.sesameloader.BigDataRepositoryManagerUnisolated#getMaximumThreads()}.
      * @throws IOException 
      * @throws RepositoryException 
+     * @throws SailException 
      */
     @Test
-    public void testGetMaximumThreads() throws RepositoryException, IOException
+    public void testGetMaximumThreads() throws RepositoryException, IOException, SailException
     {
         BigDataRepositoryManagerUnisolated repoManager = new BigDataRepositoryManagerUnisolated(repositoryFile, "fastload.properties");
         
         Assert.assertEquals(new Integer(1), repoManager.getMaximumThreads());
+
+        repoManager.shutDown();
     }
     
 }

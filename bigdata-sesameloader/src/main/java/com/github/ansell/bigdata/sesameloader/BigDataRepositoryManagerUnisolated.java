@@ -33,6 +33,8 @@ public class BigDataRepositoryManagerUnisolated implements RepositoryManager
     private final Logger log = LoggerFactory.getLogger(BigDataRepositoryManagerUnisolated.class);
     
     private BigdataSailRepository repository;
+
+    private BigdataSailRepositoryConnection unisolatedConnection;
     
     /**
      * Load a Properties object from a file.
@@ -98,9 +100,18 @@ public class BigDataRepositoryManagerUnisolated implements RepositoryManager
     @Override
     public RepositoryConnection getConnection() throws RepositoryException
     {
-        BigdataSailRepositoryConnection unisolatedConnection = repository.getUnisolatedConnection();
-        
-        unisolatedConnection.setAutoCommit(false);
+        if(unisolatedConnection == null)
+        {
+            synchronized(this)
+            {
+                if(unisolatedConnection == null)
+                {
+                    unisolatedConnection = repository.getUnisolatedConnection();
+                    
+                    unisolatedConnection.setAutoCommit(false);
+                }
+            }
+        }
         
         return unisolatedConnection;
     }
@@ -115,7 +126,7 @@ public class BigDataRepositoryManagerUnisolated implements RepositoryManager
         try
         {
             // by default we are in fastmode, so we need to compute closure before shutting down
-            repoCxn = (BigdataSailRepositoryConnection)repository.getConnection();
+            repoCxn = (BigdataSailRepositoryConnection)getConnection();
             sailCxn = (BigdataSailConnection)repoCxn.getSailConnection();
             sailCxn.computeClosure();
             sailCxn.getTripleStore().commit();
