@@ -16,12 +16,23 @@
 		<dependency>
 			<groupId>com.bigdata</groupId>
 			<artifactId>bigdata</artifactId>
-			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.bigdata</groupId>
+			<artifactId>lgpl-utils</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.cliffc.high-scale-lib</groupId>
 			<artifactId>high-scale-lib</artifactId>
-			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>it.unimi.dsi</groupId>
+			<artifactId>dsiutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>it.unimi.dsi</groupId>
+			<artifactId>fastutil</artifactId>
+			<version>5.1.5</version>
 		</dependency>
 	</dependencies>
 	<!-- NOTE: We must use an id that will be reused by the modules that need 
