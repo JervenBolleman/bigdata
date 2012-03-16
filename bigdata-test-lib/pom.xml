@@ -119,5 +119,9 @@
 			<groupId>com.github.stephenc.high-scale-lib</groupId>
 			<artifactId>high-scale-lib</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.semanticweb.yars</groupId>
+			<artifactId>nxparser</artifactId>
+		</dependency>
 	</dependencies>
 </project>

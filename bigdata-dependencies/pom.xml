@@ -29,6 +29,10 @@
 			<groupId>it.unimi.dsi</groupId>
 			<artifactId>fastutil</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.semanticweb.yars</groupId>
+			<artifactId>nxparser</artifactId>
+		</dependency>
 	</dependencies>
 	<!-- NOTE: We must use an id that will be reused by the modules that need 
 		this dependency, or it will not be picked up by the new maven rules -->
