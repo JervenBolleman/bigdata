@@ -7,9 +7,9 @@
 		<relativePath>..</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>bigdata-test-dependencies</artifactId>
+	<artifactId>bigdata-dependencies</artifactId>
 	<packaging>pom</packaging>
-	<name>Big Data Test Dependencies</name>
+	<name>Big Data Dependencies</name>
 	<description>Dependencies that are not available in Maven repositories</description>
 
 	<dependencies>
